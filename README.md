@@ -50,6 +50,7 @@ $ npx prisma migrate-dev
 
 # Execute a aplicação em modo de desenvolvimento
 $ npm run dev
+```
 
 # A aplicação iniciará na porta configurada no arquivo '.env'
 <p align="center">
