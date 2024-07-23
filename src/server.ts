@@ -44,6 +44,6 @@ app.register(getTripDetails);
 app.register(getParticipant);
 
 const port = env.PORT || 3333;
-app.listen({ port }).then(() => {
+app.listen({ port, host: '0.0.0.0' }).then(() => {
   console.log(`Server running on port: ${port}`);
 });
