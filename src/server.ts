@@ -22,7 +22,7 @@ import { env } from "./env";
 const app = fastify();
 
 app.register(cors, {
-  origin: `${env.WEB_BASE_URL}`,
+  origin: '*',
 });
 
 app.setValidatorCompiler(validatorCompiler);
