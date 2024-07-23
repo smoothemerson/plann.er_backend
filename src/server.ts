@@ -22,13 +22,13 @@ import { env } from "./env";
 const app = fastify();
 
 app.register(cors, {
-  origin: '*',
+  origin: "*",
 });
 
 app.setValidatorCompiler(validatorCompiler);
 app.setSerializerCompiler(serializerCompiler);
 
-app.setErrorHandler(errorHandler)
+app.setErrorHandler(errorHandler);
 
 app.register(createTrip);
 app.register(confirmTrip);
@@ -43,6 +43,7 @@ app.register(updateTrip);
 app.register(getTripDetails);
 app.register(getParticipant);
 
-app.listen({ port: env.PORT || 3333 }).then(() => {
-  console.log("Server running");
+const port = env.PORT || 3333;
+app.listen({ port }).then(() => {
+  console.log(`Server running on port: ${port}`);
 });
